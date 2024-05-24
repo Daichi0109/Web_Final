@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<style>
+    body {
+       font-family: Arial, sans-serif;
+       margin: 0;
+       padding: 0;
+       background-image: url('nike.png');
+       background-size: cover;
+       background-repeat: no-repeat;
+}
+    header {
+       background-color: #333;
+       color: #fff;
+       padding: 20px;
+       text-align: center;
+}
+    nav {
+       background-color: #444;
+       padding: 10px;
+       text-align: right;
+}
+    nav a {
+       color: #fff;
+       text-decoration: none;
+       padding: 10px 20px;
+}
+    nav a:hover {
+       background-color: #666;
+ }
+    section {
+       padding: 20px;
+       text-align: center;
+       color:white;
+}
+    footer {
+       background-color: #333;
+       color: #fff;
+       text-align: center;
+       padding: 10px 0;
+       position: fixed;
+       bottom: 0;
+       width: 100%;
+}
+</style>
+</head>
+<body>
+<header>
+       <h1>Welcome to Sole Kickz</h1>
+</header>
+<nav>
+       <a href="products.html">Products</a>
+       <a href="#" id="servicesLink">Services</a>
+       <a href="#" id="aboutLink">About us</a>
+       <a href="#" id="contactLink">Contact us</a>
+</nav>
+<section id="content">
+</section>
+<script>
+   document.getElementById('aboutLink').addEventListener('click', function(event) {
+   event.preventDefault();
+   document.getElementById('content').innerHTML = `
+   <h2>About Our Shoe Store</h2>
+   <p>Welcome to Sole Kickz!<br> We offer a Good Quality of shoes.<br>Our mission is to provide quality footwear at affordable prices.</p>`;
+});
+document.getElementById('contactLink').addEventListener('click', function(event) {
+   event.preventDefault();
+   document.getElementById('content').innerHTML = `
+   <h2>Contact Us</h2>
+   <p>Feel free to reach out to us with any questions or concerns.<br> You can contact us via email at 
+   Solekickz@gmail.com or call us at (63+) 9987875463.<br> We look forward from you!</p>`;
+   });
+document.getElementById('servicesLink').addEventListener('click', function(event) {
+   event.preventDefault();
+   document.getElementById('content').innerHTML = `
+      <h2>Our Services</h2>
+      <p>At Sole Kickz, we offer a range of services to cater to all your footwear needs:<br>
+Shoe Fitting: Our experts help you find the perfect fit.<br>
+Shoe Repair: We repair and restore your favorite pairs.</br></p>`;
+   });
+</script>
+</body>
+</html>
